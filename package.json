@@ -1,0 +1,24 @@
+{
+  "name": "@thewebforge/astro-og-images",
+  "version": "1.0.0",
+  "description": "Automatically generate OpenGraph images for your Astro site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thewebforge/astro-og-images.git"
+  },
+  "keywords": [
+    "astro",
+    "open graph",
+    "image"
+  ],
+  "author": "Cédric Bontems <cedric@thewebforge.dev> (https://thewebforge.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thewebforge/astro-og-images/issues"
+  },
+  "homepage": "https://github.com/thewebforge/astro-og-images#readme"
+}
