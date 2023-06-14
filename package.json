@@ -1,14 +1,15 @@
 {
   "name": "@thewebforge/astro-og-images",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Automatically generate OpenGraph images for your Astro site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release --branches main"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thewebforge/astro-og-images.git"
+    "url": "https://github.com/thewebforge/astro-og-images.git"
   },
   "keywords": [
     "astro",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/thewebforge/astro-og-images/issues"
   },
-  "homepage": "https://github.com/thewebforge/astro-og-images#readme"
+  "homepage": "https://github.com/thewebforge/astro-og-images#readme",
+  "devDependencies": {
+    "semantic-release": "^21.0.5"
+  }
 }
