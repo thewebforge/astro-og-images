@@ -1,5 +1,7 @@
 # @thewebforge/astro-og-images 🌠
 
+![eCommerce](./gh-assets/eCommerce.png)
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro/small.svg)](https://astro.build)
 This package generates OpenGraph images for your collection entries when you build your Astro site.
 
 - <strong>[Why Astro OG images](#why-astro-og-images)</strong>
@@ -134,22 +136,29 @@ The name of the template you want to use to generate your images. You can use th
 ## Examples
 
 ### `bgPhoto`
+
 ![bgPhoto](./gh-assets/bgPhoto.png)
 
 ### `branded`
+
 ![branded](./gh-assets/branded.png)
 
 ### `eCommerce`
+
 ![eCommerce](./gh-assets/eCommerce.png)
 
 ### `retro`
+
 ![retro](./gh-assets/retro.png)
 
 ### `simple`
+
 ![simple](./gh-assets/simple.png)
 
 ### `wave`
+
 ![wave](./gh-assets/wave.png)
+
 ## Contributing
 
 This package is maintained by Cédric / The Web Forge. You're welcome to submit an issue or PR!
