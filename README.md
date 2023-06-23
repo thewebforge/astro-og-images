@@ -26,6 +26,9 @@ First, install the `@thewebforge/astro-og-images` package using your package man
 npm i @thewebforge/astro-og-images
 ```
 
+> **Warning**
+> There a issues I still need to fix when using pnpm. For now, I recommend using npm or yarn.
+
 You will need a JSX renderer for rendering Images templates. If you don't have one, you can install the `@astrojs/react` integration:
 
 ```sh
@@ -72,29 +75,81 @@ You will find the same folder structure as your `blog` folder. The images will h
 After verifying that the open graph images are built, you can add them to your layout's `<head>`.
 
 ## Configuration
+
 To configure this package, customize the returned object of the `getImageOptions()` function created in `[...ogimage].ts`.
 
+**`[...ogimage].ts`**
+
+```ts
+import { getCollection } from "astro:content";
+
+// Generate images for the services collection
+const entries = await getCollection("services");
+
+export const { getStaticPaths, get } = ogApi({
+    ...
+});
+```
 
 ### `entries`
 
-The entries you want to generate the images for.
+The entries you want to generate the images for. You can use the `getCollection()` function from `astro:content` to get your entries.
+
+**`[...ogimage].ts`**
+
+```ts
+...
+   entries: entries,
+```
 
 ### `param`
 
 The name of the parameter you want to use to generate your images.
 
+**`[...ogimage].ts`**
+
+```ts
+...
+   param: "ogimage", // must match the name of the file
+```
+
 ### `template`
 
 The name of the template you want to use to generate your images. You can use the default template `simple` or choose from the list:
-- `bgPhoto` 
+
+- `bgPhoto`
 - `branded`
 - `eCommerce`
 - `retro`
 - `simple`
 - `wave`
 
+**`[...ogimage].ts`**
+
+```ts
+...
+    template: "wave",
+```
+
 ## Examples
 
+### `bgPhoto`
+![bgPhoto](./gh-assets/bgPhoto.png)
+
+### `branded`
+![branded](./gh-assets/branded.png)
+
+### `eCommerce`
+![eCommerce](./gh-assets/eCommerce.png)
+
+### `retro`
+![retro](./gh-assets/retro.png)
+
+### `simple`
+![simple](./gh-assets/simple.png)
+
+### `wave`
+![wave](./gh-assets/wave.png)
 ## Contributing
 
 This package is maintained by Cédric / The Web Forge. You're welcome to submit an issue or PR!
