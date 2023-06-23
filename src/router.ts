@@ -3,11 +3,9 @@ import { generate } from "./generator";
 import type { OGApiConfig, OGImageOptions } from "./schema";
 
 const ogGetStaticPaths = ({ entries, param }: OGApiConfig): GetStaticPaths => {
-  console.log(entries);
   const paths = entries.map((entry: { slug: string }) => ({
     params: { [param]: `${entry.slug}.png` },
   }));
-  console.log(paths);
   return function getStaticPaths() {
     return paths;
   };
