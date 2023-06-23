@@ -1,7 +1,11 @@
 # @thewebforge/astro-og-images 🌠
 
 ![eCommerce](./gh-assets/eCommerce.png)
-[![Built with Astro](https://astro.badg.es/v1/built-with-astro/small.svg)](https://astro.build)
+
+[![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://github.com/withastro)
+[![Typescript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://commitizen.github.io/cz-cli/)
+
 This package generates OpenGraph images for your collection entries when you build your Astro site.
 
 - <strong>[Why Astro OG images](#why-astro-og-images)</strong>
@@ -18,7 +22,7 @@ Open Graph images, also known as OG images, are images that are specifically des
 
 When a link is shared on social media, the platform usually tries to generate a preview of the content by fetching information from the webpage. This preview typically includes a title, description, and an image. The Open Graph protocol provides a way for developers to define and optimize these elements for social sharing.
 
-With @thewebforge/astro-og-images, you don't have to worry about creating these files: build your Astro site as you normally would, and the astro-og-images package will crawl your routes and create the Open Graph images file.
+With `@thewebforge/astro-og-images`, you don't have to worry about creating these files: build your Astro site as you normally would, and the astro-og-images package will crawl your routes and create the Open Graph images file.
 
 ## Installation
 
@@ -29,7 +33,7 @@ npm i @thewebforge/astro-og-images
 ```
 
 > **Warning**
-> There a issues I still need to fix when using pnpm. For now, I recommend using npm or yarn.
+> There are issues I still need to fix when using pnpm. For now, I recommend using npm or yarn.
 
 You will need a JSX renderer for rendering Images templates. If you don't have one, you can install the `@astrojs/react` integration:
 
