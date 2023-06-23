@@ -42,7 +42,7 @@ export const bgPhoto = (options: OGImageOptions) => {
           bottom: "0",
           left: "0",
           right: "0",
-          opacity: 0.85,
+          opacity: 0.7,
           position: "absolute",
         }}
       ></div>
@@ -73,7 +73,7 @@ export const bgPhoto = (options: OGImageOptions) => {
                 textAlign: "center",
                 color:
                   options?.description?.color ??
-                  options.colors?.text1 ?? "black",
+                  options.colors?.text1 ?? "white",
               }}
             >
               {options.description.text}

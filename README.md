@@ -68,7 +68,9 @@ export const { getStaticPaths, get } = ogApi({
       title: {
         text: data.title,
       },
-      description: { text: data.description },
+      description: {
+        text: data.description
+        },
     };
   },
 });
