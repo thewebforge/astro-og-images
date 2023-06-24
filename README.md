@@ -47,6 +47,27 @@ npx astro add react
 
 To use it, create a folder in your project `pages` folder called `open-graph` or any other name you want. A folder with the same name will be generated at build time in your `dist` folder with all your open graph images.
 
+``sh
+├── public
+├── src
+│   ├── components
+│   ├── content
+│   │   └── blog
+│   │   │   ├── post-1.md
+│   │   │   ├── post-2.md
+│   │   │   └── ...
+│   │   └── config.ts
+│   ├── layouts
+│   ├── pages
+│   │   ├── blog
+│   │   └── open-graph
+│   │       └── [...ogimage].ts
+│   └── styles
+├── astro.config.mjs 
+├── package.json
+└── tsconfig.json
+```
+
 In the folder you just created, create a file called `[...ogimage].ts` where `ogimage` is the name of the parameter you want to use to generate your images.
 
 **`[...ogimage].ts`**
