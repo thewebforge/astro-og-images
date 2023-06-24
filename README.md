@@ -47,7 +47,7 @@ npx astro add react
 
 To use it, create a folder in your project `pages` folder called `open-graph` or any other name you want. A folder with the same name will be generated at build time in your `dist` folder with all your open graph images.
 
-``sh
+```sh
 ├── public
 ├── src
 │   ├── components
