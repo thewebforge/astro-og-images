@@ -5,6 +5,9 @@
 [![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://github.com/withastro)
 [![Typescript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://commitizen.github.io/cz-cli/)
+[![HitCount](  https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Fthewebforge%2Fastro-og-images.json%3Fcolor%3Dgren
+)](http://hits.dwyl.com/thewebforge/astro-og-images)
+
 
 This package generates OpenGraph images for your collection entries when you build your Astro site.
 
