@@ -66,7 +66,7 @@ export const imageOptions = z
     image: z.object({
       path: z.string(),
       width: z.array(z.number()).optional(),
-    }),
+    }).optional(),
     logo: z
       .object({
         path: z.string(),
