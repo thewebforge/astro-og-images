@@ -42,10 +42,10 @@ export const imageOptions = z
   .object({
     path: z.string(),
     title: textOptions,
-    description: textOptions.optional(),
-    site: textOptions.optional(),
-    author: textOptions.optional(),
-    price: textOptions.optional(),
+    description: textOptions.partial().optional(),
+    site: textOptions.partial().optional(),
+    author: textOptions.partial().optional(),
+    price: textOptions.partial().optional(),
     spacing: z
       .object({
         small: z.number().optional(),
@@ -65,7 +65,7 @@ export const imageOptions = z
     gradient: z.string().optional(),
     image: z.object({
       path: z.string(),
-      width: z.array(z.number()).optional(),
+      width: z.number().optional(),
     }).optional(),
     logo: z
       .object({
