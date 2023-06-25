@@ -70,7 +70,7 @@ export const imageOptions = z
     logo: z
       .object({
         path: z.string(),
-        size: z.array(z.number()).optional(),
+        width: z.number().optional(),
       })
       .optional(),
     fonts: z.array(fontOptions).optional(),
