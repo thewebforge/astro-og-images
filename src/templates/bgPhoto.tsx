@@ -1,4 +1,4 @@
-import type { OGImageOptions } from "~/schema";
+import type { OGImageOptions } from "../schema.js";
 
 export const bgPhoto = (options: OGImageOptions) => {
   return (

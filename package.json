@@ -1,17 +1,11 @@
 {
-  "type": "module",
   "name": "@thewebforge/astro-og-images",
-  "version": "0.0.0-development",
   "description": "Automatically generate OpenGraph images for your Astro site",
-  "main": "./src/index.ts",
-  "types": "./src/index.d.ts",
-  "exports": {
-    ".": "./src/index.ts"
-  },
-  "scripts": {
-    "commit": "git-cz",
-    "semantic-release": "semantic-release"
-  },
+  "version": "0.0.0-development",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "author": "Cédric Bontems <cedric@thewebforge.dev> (https://thewebforge.dev/)",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/thewebforge/astro-og-images.git"
@@ -21,16 +15,48 @@
     "open graph",
     "image"
   ],
-  "author": "Cédric Bontems <cedric@thewebforge.dev> (https://thewebforge.dev/)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thewebforge/astro-og-images/issues"
   },
   "homepage": "https://github.com/thewebforge/astro-og-images#readme",
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "commit": "git-cz",
+    "dev": "rm -rf dist && tsc --watch",
+    "semantic-release": "semantic-release",
+    "test": "mocha --timeout 20000"
+  },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "cz-conventional-changelog": "3.3.0",
-    "semantic-release": "21.0.5"
+    "semantic-release": "21.0.5",
+    "typescript": "5.1.6"
+  },
+  "dependencies": {
+    "@astrojs/react": "2.2.1",
+    "@resvg/resvg-js": "2.4.1",
+    "@types/node-fetch-cache": "3.0.0",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "^18.0.6",
+    "astro": "2.7.0",
+    "kleur": "4.1.5",
+    "node-fetch-cache": "3.1.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "satori": "0.10.1",
+    "sharp": "0.32.1",
+    "zod": "3.21.4"
+  },
+  "peerDependencies": {
+    "astro": ">=2.0.0"
   },
   "config": {
     "commitizen": {
@@ -56,15 +82,5 @@
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
-  },
-  "dependencies": {
-    "@resvg/resvg-js": "2.4.1",
-    "@types/node-fetch-cache": "3.0.0",
-    "@types/react": "18.2.14",
-    "astro": "2.7.0",
-    "kleur": "4.1.5",
-    "node-fetch-cache": "3.1.3",
-    "satori": "0.10.1",
-    "zod": "3.21.4"
   }
 }

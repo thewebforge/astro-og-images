@@ -1,5 +1,5 @@
-import type { OGImageOptions } from "~/schema";
-import { loadImageToBase64 } from "../loader";
+import type { OGImageOptions } from "../schema.js";
+import { loadImageToBase64 } from "../loader.js";
 
 export const branded = async (options: OGImageOptions) => {
     const logo = options.logo ? await loadImageToBase64(options.logo.path) : null;
