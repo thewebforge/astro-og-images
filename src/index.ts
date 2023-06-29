@@ -1,2 +1,2 @@
-import { ogApi } from './router';
+import { ogApi } from './router.js';
 export default ogApi;

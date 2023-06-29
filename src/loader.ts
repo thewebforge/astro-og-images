@@ -1,11 +1,11 @@
-import type { OGImageOptions } from "./schema";
 import type { SatoriOptions } from "satori";
+import type { OGImageOptions } from "./schema.js";
 import fetch from "node-fetch-cache";
 import fs from "fs";
 import fsPromises from "fs/promises";
 import { cyan, dim, red } from "kleur/colors";
 
-import templates from "./templates";
+import templates from "./templates/index.js";
 
 type FontOptions = SatoriOptions["fonts"];
 

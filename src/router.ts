@@ -1,6 +1,6 @@
 import type { APIRoute, GetStaticPaths } from "astro";
-import { generate } from "./generator";
-import type { OGApiConfig, OGImageOptions } from "./schema";
+import type { OGApiConfig, OGImageOptions } from "./schema.js";
+import { generate } from "./generator.js";
 
 const ogGetStaticPaths = ({ entries, param }: OGApiConfig): GetStaticPaths => {
   const paths = entries.map((entry: { slug: string }) => ({

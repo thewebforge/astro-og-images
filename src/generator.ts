@@ -1,43 +1,34 @@
 import type { OGImageOptions } from "./schema.js";
 import type { SatoriOptions } from "satori";
-import sharp from "sharp";
 import { cyan, dim, green } from "kleur/colors";
 import satori from "satori";
+import sharp from "sharp";
 import { getTemplate, getFonts } from "./loader.js";
 
-type FontOptions = SatoriOptions["fonts"];
+type FontOptions = SatoriOptions["fonts"][0];
 
 const svgToSharp = async (
-  p: string | Buffer,
+  image: string | Buffer,
   { width, height }: { width?: number; height?: number }
 ) => {
-  const instance = sharp(p);
-
+  const instance = sharp(image);
   const metadata = await instance.metadata();
-
   const initDensity = metadata.density ?? 300;
-
   if (metadata.format !== "svg") {
     return instance;
   }
-
   let wDensity = 0;
   let hDensity = 0;
   if (width && metadata.width) {
     wDensity = (initDensity * width) / metadata.width;
   }
-
   if (height && metadata.height) {
     hDensity = (initDensity * height) / metadata.height;
   }
-
   if (!wDensity && !hDensity) {
-    // both width & height are not present and/or
-    // can't detect both metadata.width & metadata.height
     return instance;
   }
-
-  return sharp(p, { density: Math.max(wDensity, hDensity) }).resize(
+  return sharp(image, { density: Math.max(wDensity, hDensity) }).resize(
     width,
     height
   );
@@ -55,7 +46,7 @@ export const generate = async (options: OGImageOptions, template: string) => {
     width: 1200,
     height: 630,
     embedFont: true,
-    fonts: fonts.filter((font) => font !== undefined) as FontOptions,
+    fonts: fonts.filter((font) => font !== undefined) as FontOptions[],
     debug: options.debug ?? false,
   };
   const renderedTemplate = await getTemplate(options, template);
