@@ -24,9 +24,6 @@
     "./dist/*": "./dist/*",
     "./package.json": "./package.json"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "rm -rf dist && tsc",
     "commit": "git-cz",
@@ -79,7 +76,7 @@
           "changelogTitle": "@thewebforge/astro-og-images changelog"
         }
       ],
-      "@semantic-release/npm",
+      ["@semantic-release/npm", { "pkgRoot": "./dist" }],
       "@semantic-release/github"
     ]
   }
