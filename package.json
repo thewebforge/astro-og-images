@@ -24,6 +24,9 @@
     "./dist/*": "./dist/*",
     "./package.json": "./package.json"
   },
+  "files": [
+    "./dist/**/*",
+  ],
   "scripts": {
     "build": "rm -rf dist && tsc",
     "commit": "git-cz",
