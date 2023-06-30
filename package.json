@@ -76,7 +76,7 @@
           "changelogTitle": "@thewebforge/astro-og-images changelog"
         }
       ],
-      ["@semantic-release/npm", { "pkgRoot": "./dist" }],
+      "@semantic-release/npm",
       "@semantic-release/github"
     ]
   }
