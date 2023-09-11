@@ -1,0 +1,73 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+export const retro = (options) => {
+    return (_jsx("div", { style: {
+            background: options?.gradient
+                ? options.gradient
+                : options?.colors?.surface1 ?? "whitesmoke",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+        }, children: _jsx("div", { style: {
+                border: `5px solid ${options?.colors?.text1 ?? "black"}`,
+                background: `url('${options?.image?.path ??
+                    "https://source.unsplash.com/random/650/?abstract"}')`,
+                backgroundSize: "cover",
+                borderRadius: "5px",
+                boxShadow: ` ${options.spacing?.small ?? 32}px ${options.spacing?.small ?? 32}px ${options.colors?.text1 ?? "black"}`,
+                filter: "sepia(80%) grayscale(65%)",
+                display: "flex",
+                justifyContent: "center",
+                width: "88%",
+                height: "80%",
+            }, children: _jsxs("div", { style: {
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    margin: 0,
+                    padding: options?.spacing?.large ?? 72,
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                }, children: [_jsx("h1", { style: {
+                            fontSize: options?.title?.fontSize ?? 72,
+                            fontFamily: options?.title?.fontFamily ?? "inherit",
+                            fontWeight: options?.title?.fontWeight ?? 700,
+                            fontStyle: options?.title?.fontStyle ?? "normal",
+                            textAlign: "start",
+                            lineHeight: options?.title?.lineHeight ?? 1.1,
+                            color: options?.title?.color ?? options.colors?.text1 ?? "black",
+                            padding: 0,
+                            margin: 0,
+                        }, children: options.title.text }), options.description && (_jsx("p", { style: {
+                            fontSize: options?.description?.fontSize ?? 32,
+                            fontFamily: options?.description?.fontFamily ?? "inherit",
+                            fontWeight: options?.description?.fontWeight ?? 400,
+                            fontStyle: options?.description?.fontStyle ?? "normal",
+                            padding: 0,
+                            margin: 0,
+                            textAlign: "left",
+                            color: options?.description?.color ??
+                                options.colors?.text1 ?? "black",
+                        }, children: options.description.text })), _jsxs("div", { style: {
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                            padding: 0,
+                            margin: 0,
+                        }, children: [options?.author && (_jsxs("span", { style: {
+                                    fontSize: options?.author?.fontSize ?? 28,
+                                    fontFamily: options?.author?.fontFamily ?? "inherit",
+                                    fontWeight: options?.author?.fontWeight ?? 400,
+                                    fontStyle: options?.author?.fontStyle ?? "normal",
+                                    textAlign: "start",
+                                    color: options?.author?.color ?? options.colors?.text1 ?? "black",
+                                }, children: ["By ", options.author.text] })), options.site && (_jsx("span", { style: {
+                                    fontSize: options?.site?.fontSize ?? 28,
+                                    fontFamily: options?.site?.fontFamily ?? "inherit",
+                                    fontWeight: options?.site?.fontWeight ?? 400,
+                                    fontStyle: options?.site?.fontStyle ?? "normal",
+                                    color: options?.author?.color ?? options.colors?.text1 ?? "black",
+                                }, children: options.site.text }))] })] }) }) }));
+};
