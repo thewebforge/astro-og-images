@@ -34,7 +34,7 @@ const ogEndpoint = (options: OGApiConfig): APIRoute => {
  * @example
  * ```ts
  * // src/pages/open-graph/[...ogImage].astro
- * import { ogApi } from "astro-og-image";
+ * import { ogApi } from "astro-og-images";
  * ```
  *
  * @param options user options for the OG Image
@@ -44,10 +44,10 @@ export const ogApi = (
   options: OGApiConfig
 ): {
   getStaticPaths: GetStaticPaths;
-  get: APIRoute;
+  GET: APIRoute;
 } => {
   return {
     getStaticPaths: ogGetStaticPaths(options),
-    get: ogEndpoint(options),
+    GET: ogEndpoint(options),
   };
 };
