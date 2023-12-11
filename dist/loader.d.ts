@@ -25,7 +25,7 @@ export declare const getFonts: (options: OGImageOptions) => Promise<FontOptions>
  * @param template The template to use.
  * @returns A JSX construct of the OG Image.
  */
-export declare const getTemplate: (options: OGImageOptions, template: string) => import("react/jsx-runtime.js").JSX.Element | Promise<import("react/jsx-runtime.js").JSX.Element>;
+export declare const getTemplate: (options: OGImageOptions, template: string) => import("react/jsx-runtime").JSX.Element | Promise<import("react/jsx-runtime").JSX.Element>;
 /**
  * Load an image to base64.
  *
