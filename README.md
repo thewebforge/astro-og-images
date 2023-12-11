@@ -35,9 +35,6 @@ First, install the `@thewebforge/astro-og-images` package using your package man
 npm i @thewebforge/astro-og-images
 ```
 
-> **Warning**
-> There are issues I still need to fix when using pnpm. For now, I recommend using npm or yarn.
-
 You will need a JSX renderer for rendering Images templates. If you don't have one, you can install the `@astrojs/react` integration:
 
 ```sh
